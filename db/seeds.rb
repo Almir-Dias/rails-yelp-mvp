@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+dishoom =     {name: "Dishoom", address: "7 Boundary St, London E2 7JE", category: 'french'}
+pizza_east =  {name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", category: 'belgian'}
+almir_food =  {name: "Almir Food", address: "Moema, ao lado do shopping Ibirapuera", category: 'italian'}
+coringao =    {name: "Coringão", address: "Zona leste, próximo ao metro Itaquera ", category: 'japanese'}
+nike =        {name: "Nike Food", address: "Ipiranga, bem perto do colégio Maria Imaculada", category: 'chinese'}
+
+
+[dishoom, pizza_east, almir_food,  coringao, nike].each do |attributes|
+  restaurant = Restaurant.create!(attributes)
+  puts "Created #{restaurant.name}"
+end
+puts "Finished!"
